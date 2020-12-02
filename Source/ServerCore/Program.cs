@@ -40,7 +40,8 @@ S - save player statistics file");
             while (true)
             {
                 Thread.Sleep(500);
-                var key = Console.ReadKey(true);
+                var key = Console.Read(true);
+                var char = Convert.toChar(key);
                 if (char.ToLower(key.KeyChar) == 'q') Manager.SaveAndQuit();
                 if (char.ToLower(key.KeyChar) == 'r') Manager.SaveAndRestart();
                 else if (char.ToLower(key.KeyChar) == 'l') Manager.EverybodyLogoff();
